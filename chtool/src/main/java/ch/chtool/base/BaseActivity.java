@@ -2,6 +2,7 @@ package ch.chtool.base;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +13,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,15 +35,15 @@ public abstract class BaseActivity extends Activity {
     // log
     private static Log log;
 
-    private AutoRelativeLayout toolbar;
     private TextView toolbar_title;
     private ImageView toolbar_back;
     private Gson gson;
+    private Context context;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        gson = new Gson();
+        context = this;
         //设置布局
         setContentView(initLayout());
         //初始化控件
@@ -118,31 +120,18 @@ public abstract class BaseActivity extends Activity {
 
 
     // 界面跳转
-    public void startActivity(Class<?> clz) {
+    public void sa(Class<?> clz) {
         startActivity(new Intent(BaseActivity.this, clz));
     }
 
     // 携带参数的页面跳转
-    public void startActivity(Class<?> clz, Bundle bundle) {
+    public void sa(Class<?> clz, Bundle bundle) {
         Intent intent = new Intent();
         intent.setClass(this, clz);
         if (bundle != null) {
             intent.putExtras(bundle);
         }
         startActivity(intent);
-    }
-
-    private void bindTitle() {
-        toolbar = findViewById(R.id.layout_title_rlc);
-        toolbar_back = toolbar.findViewById(R.id.layout_title_back);
-        toolbar_title = toolbar.findViewById(R.id.layout_title_text);
-        toolbar_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        toolbar_title.setText("标题");
     }
 
 

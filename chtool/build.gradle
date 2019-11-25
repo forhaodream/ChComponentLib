@@ -38,12 +38,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     // 图片
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
-    // 请求
-    implementation 'com.squareup.okhttp:okhttp:2.4.0'
-    implementation 'com.squareup.okio:okio:1.6.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+//    // 请求
+//    implementation 'com.squareup.okhttp:okhttp:2.4.0'
+//    implementation 'com.squareup.okio:okio:1.6.0'
     // gson
-    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
     // 百分比布局
     implementation 'com.zhy:autolayout:1.4.5'
     // cardview
@@ -55,18 +55,18 @@ dependencies {
     // greenDao
     implementation 'org.greenrobot:greendao:3.2.0'
     // OKhttp3
-    implementation 'com.squareup.okhttp3:okhttp:3.12.1'//okhttp的依赖
+//    implementation 'com.squareup.okhttp3:okhttp:3.12.1'//okhttp的依赖
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'//拦截器的依赖
     // retrofit2
-    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
-    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     implementation 'com.squareup.retrofit2:converter-jackson:2.0.2'
 
     // rxjava2
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
 
-    implementation 'org.apache.commons:commons-lang3:3.4'
+    implementation 'org.apache.commons:commons-lang3:3.6'
 
 }
