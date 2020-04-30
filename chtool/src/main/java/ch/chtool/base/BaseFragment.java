@@ -31,7 +31,7 @@ public abstract class BaseFragment extends Fragment {
 
     protected Activity oThis;
 
-    protected Context context;
+    public static Context context;
 
     protected AlertDialog alertDialog;
 
