@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
  * on 2018/11/7 16:47
  */
 public class RecyclerViewHolder extends RecyclerView.ViewHolder {
-
-    private SparseArray<View> views;//稀疏数组,存放传递的布局中所有view
+    //稀疏数组,存放传递的布局中所有view
+    private SparseArray<View> views;
 
     private RecyclerViewHolder(View itemView) {
         super(itemView);
