@@ -27,7 +27,7 @@ public class SpannerDropDownSingleDialog implements View.OnClickListener, Adapte
     private Context mContext;
     private AlertDialog mDialog;
     public final static int COMPLEXLIST = 3;
-    private int mTheme = -1;
+    private int mTheme;
     private int mLayoutResId;
     private List<String> mList = new ArrayList<String>();
     private OnItemClickListener mOnItemTextClickListener;

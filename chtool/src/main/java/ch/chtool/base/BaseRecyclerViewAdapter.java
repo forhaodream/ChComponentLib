@@ -1,14 +1,13 @@
 package ch.chtool.base;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
 
-import ch.chtool.R;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by CH

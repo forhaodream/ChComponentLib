@@ -1,5 +1,6 @@
 package ch.chtool.headimg;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -52,6 +53,7 @@ public class ClipView extends View {
         xfermode = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
     }
 
+    @SuppressLint("WrongConstant")
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);

@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import ch.chtool.retrofit2.RetrofitManager;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -16,6 +17,7 @@ public class Retrofit2上传文件 {
     private List<File> mFileList = new ArrayList<>();
 
     private void uploadPic() {
+
         List<MultipartBody.Part> files2 = new ArrayList<>();
         //TODO 上传多张图片
         for (int i = 0; i < mFileList.size(); i++) {

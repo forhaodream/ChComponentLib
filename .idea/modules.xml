@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ComponentLib.iml" filepath="$PROJECT_DIR$/ComponentLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/ComponentLib-app.iml" filepath="$PROJECT_DIR$/app/ComponentLib-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chtool/ComponentLib-chtool.iml" filepath="$PROJECT_DIR$/chtool/ComponentLib-chtool.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chtool/chtool.iml" filepath="$PROJECT_DIR$/chtool/chtool.iml" />
-      <module fileurl="file://$PROJECT_DIR$/workplacebych-ComponentLib.iml" filepath="$PROJECT_DIR$/workplacebych-ComponentLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ComponentLib.iml" filepath="$PROJECT_DIR$/ComponentLib.iml" group="ComponentLib" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ComponentLib/app" />
+      <module fileurl="file://$PROJECT_DIR$/chtool/chtool.iml" filepath="$PROJECT_DIR$/chtool/chtool.iml" group="ComponentLib/chtool" />
     </modules>
   </component>
 </project>
