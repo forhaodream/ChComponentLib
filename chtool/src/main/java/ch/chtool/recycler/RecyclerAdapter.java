@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
+import ch.chtool.utils.RecyclerViewHolder;
 
 /**
  * Created by CH
@@ -24,6 +25,7 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerVi
         this.mDatas = datas;
     }
 
+    @Override
     public int getItemCount() {
         return this.mDatas == null ? 0 : this.mDatas.size();
     }
@@ -33,6 +35,7 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerVi
         return RecyclerViewHolder.getViewHolder(itemView);
     }
 
+    @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         if (this.mDatas != null && this.mDatas.size() > 0) {
             this.convert(holder, this.mDatas.get(position), position);

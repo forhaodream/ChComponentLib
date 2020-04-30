@@ -9,6 +9,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import ch.chtool.R;
+import ch.chtool.utils.RecyclerViewHolder;
 
 /**
  * Created by CH
