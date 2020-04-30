@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
-import ch.chtool.utils.RecyclerViewHolder;
 
 /**
  * Created by CH
