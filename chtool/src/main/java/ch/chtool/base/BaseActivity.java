@@ -31,12 +31,12 @@ public abstract class BaseActivity extends Activity {
     private TextView toolbar_title;
     private ImageView toolbar_back;
     private Gson gson;
-    private Context c;
+    private Context context;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        c = this;
+        context = this;
         //设置布局
         setContentView(initLayout());
         //初始化控件
