@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">chtool</string>
+    <string name="edit_muilt_title">输入店铺备注</string>
+    <string name="edit_muilt_max">100/100</string>
 </resources>

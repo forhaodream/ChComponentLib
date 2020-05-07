@@ -27,10 +27,48 @@
 
 
     <declare-styleable name="TimeLineMarker">
-        <attr name="markerSize" format="dimension"/>
-        <attr name="marker" format="color|reference"/>
-        <attr name="beginLine" format="color|reference"/>
-        <attr name="endLine" format="color|reference"/>
-        <attr name="lineSize" format="dimension"/>
+        <attr name="markerSize" format="dimension" />
+        <attr name="marker" format="color|reference" />
+        <attr name="beginLine" format="color|reference" />
+        <attr name="endLine" format="color|reference" />
+        <attr name="lineSize" format="dimension" />
     </declare-styleable>
+
+    <attr name="marginBottom" format="dimension" />
+    <attr name="marginLeft" format="dimension" />
+    <attr name="marginRight" format="dimension" />
+    <attr name="marginTop" format="dimension" />
+    <attr name="paddingBottom" format="dimension" />
+    <attr name="paddingLeft" format="dimension" />
+    <attr name="paddingRight" format="dimension" />
+    <attr name="paddingTop" format="dimension" />
+    <attr name="gravity" format="dimension" />
+    <attr name="segmentation" format="boolean" />
+    <declare-styleable name="CTextView">
+        <attr name="paddingLeft" />
+        <attr name="paddingTop" />
+        <attr name="paddingRight" />
+        <attr name="paddingBottom" />
+        <attr name="segmentation" />
+        <attr name="CTV_imageLeft" format="reference|color" />
+        <attr name="CTV_imageLeftWidth" format="dimension" />
+        <attr name="CTV_imageLeftHeight" format="dimension" />
+        <attr name="CTV_imageLeftMargin" format="dimension" />
+        <attr name="CTV_label" format="string" />
+        <attr name="CTV_labelSize" format="dimension" />
+        <attr name="CTV_labelColor" format="color" />
+        <attr name="CTV_labelWidth" format="dimension" />
+        <attr name="CTV_value" format="string" />
+        <attr name="CTV_valueSize" format="dimension" />
+        <attr name="CTV_valueColor" format="color" />
+        <attr name="CTV_imageRight" format="reference|color" />
+        <attr name="CTV_imageRightWidth" format="dimension" />
+        <attr name="CTV_imageRightHeight" format="dimension" />
+        <attr name="CTV_imageRightMargin" format="dimension" />
+    </declare-styleable>
+
+<!--    <declare-styleable name="CEditMultipleView">-->
+<!--        <attr name="CEV_editLineColor" format="color" />-->
+<!--    </declare-styleable>-->
+
 </resources>

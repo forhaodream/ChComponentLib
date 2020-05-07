@@ -1,4 +1,4 @@
-package ch.chtool.recycler;
+package ch.chtool.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,16 +8,16 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
-import ch.chtool.utils.RecyclerViewHolder;
 
 /**
  * Created by CH
- * on 2018/11/26 0026 15:04
+ * on 2018/11/7 16:47
  */
 public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerViewHolder> {
-    private Context mContext;
-    private int mLayoutId;
-    private List<T> mDatas;
+
+    private Context mContext;//上下文
+    private int mLayoutId;//构造传递进来的布局
+    private List<T> mDatas;//数据集合
 
     public RecyclerAdapter(Context context, int layoutId, List<T> datas) {
         this.mContext = context;
@@ -27,21 +27,30 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public int getItemCount() {
-        return this.mDatas == null ? 0 : this.mDatas.size();
+        return mDatas == null ? 0 : mDatas.size();
     }
 
+    @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(this.mContext).inflate(this.mLayoutId, parent, false);
+        //先inflate数据
+        View itemView = LayoutInflater.from(mContext).inflate(mLayoutId, parent, false);
+        //返回ViewHolder
         return RecyclerViewHolder.getViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-        if (this.mDatas != null && this.mDatas.size() > 0) {
-            this.convert(holder, this.mDatas.get(position), position);
+        //绑定怎么办？回传出去
+        if (mDatas != null && mDatas.size() > 0) {
+            convert(holder, mDatas.get(position), position);
         }
-
     }
 
-    public abstract void convert(RecyclerViewHolder var1, T var2, int var3);
+    /**
+     * 利用抽象方法回传出去
+     *
+     * @param itemData 当前的数据
+     */
+    public abstract void convert(RecyclerViewHolder holder, T itemData, int position);
+
 }

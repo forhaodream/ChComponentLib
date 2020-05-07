@@ -1,4 +1,4 @@
-package ch.chtool.utils;
+package ch.chtool.adapter;
 
 import android.util.SparseArray;
 import android.view.View;

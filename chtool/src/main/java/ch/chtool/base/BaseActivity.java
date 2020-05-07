@@ -15,12 +15,14 @@ import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import ch.chtool.app.ActivityManagerUtil;
 
 /**
  * Created by CH
  * on 2018/9/20 11:50
  */
-public abstract class BaseActivity extends Activity {
+public abstract class BaseActivity extends AppCompatActivity {
     /***封装toast对象**/
     private static Toast toast;
     /***获取TAG的activity名称**/
@@ -32,11 +34,15 @@ public abstract class BaseActivity extends Activity {
     private ImageView toolbar_back;
     private Gson gson;
     public static Context context;
+    public ActivityManagerUtil activityManagerUtil;
+    public Activity activity;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = getApplicationContext();
+        activityManagerUtil = ActivityManagerUtil.getInstance();
+        activityManagerUtil.pushOneActivity(this);
         //设置布局
         setContentView(initLayout());
         //初始化控件
@@ -127,5 +133,9 @@ public abstract class BaseActivity extends Activity {
         startActivity(intent);
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        activityManagerUtil.popOneActivity(this);
+    }
 }

@@ -1,2 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="ch.chtool"/>
+          package="ch.chtool">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+</manifest>

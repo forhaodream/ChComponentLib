@@ -48,7 +48,7 @@ public class LastItem {
                         if (mClickListener != null)
                             mClickListener.isLast();
                     } else {
-                        Log.d("防止", "崩");
+                        Log.d("防止", "崩溃");
                     }
 
                 }
